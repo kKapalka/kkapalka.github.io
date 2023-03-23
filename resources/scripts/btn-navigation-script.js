@@ -44,6 +44,32 @@ function getVisibleHeightPx($element, viewportHeight) {
     return visiblePx;
 }
 
+function onUpClick() {
+  var mostVisible = getMostVisible(sections)    
+    var scrollTop = $(window).scrollTop()
+    var top = mostVisible.prev().offset().top;
+    if ((scrollTop - top) > $(window).height()) {
+      top = mostVisible.offset().top
+    }
+    // Scroll to the previous section
+    $("html, body").animate({
+      scrollTop: top
+    }, 1000);
+}
+
+function onDownClick() {
+  var mostVisible = getMostVisible(sections)
+    var scrollTop = $(window).scrollTop()
+    var top = mostVisible.next().offset().top;
+    if ((top - scrollTop) > $(window).height()) {
+      top = mostVisible.offset().top
+    }
+    // Scroll to the next section
+    $("html, body").animate({
+      scrollTop: top
+    }, 1000);
+}
+
 function changeButtonVisibility() {
   var scrollTop = $(window).scrollTop();
   if(scrollTop === 0) {
@@ -58,38 +84,12 @@ function changeButtonVisibility() {
   }
 }
 
-debouncedChangeButtonVisibility();
-  // Add click event listener to the "up" button
-  btnUp.click(function() {
-    // Get the previous section
-    var mostVisible = getMostVisible(sections)    
-    var scrollTop = $(window).scrollTop()
-    var top = mostVisible.prev().offset().top;
-    if ((scrollTop - top) > $(window).height()) {
-      top = mostVisible.offset().top
-    }
-    // Scroll to the previous section
-    $("html, body").animate({
-      scrollTop: top
-    }, 1000);
+  changeButtonVisibility();
+  btnUp.bind('touchstart mousedown', function(e){
+    onUpClick()
   });
-
-  // Add click event listener to the "down" button
-  btnDown.click(function() {
-    var mostVisible = getMostVisible(sections)
-    var scrollTop = $(window).scrollTop()
-    var top = mostVisible.next().offset().top;
-    if ((top - scrollTop) > $(window).height()) {
-      top = mostVisible.offset().top
-    }
-    // Scroll to the next section
-    $("html, body").animate({
-      scrollTop: top
-    }, 1000);
-  });
-
-  // Add scroll event listener to the document
-  $(document).scroll(function() {
-    changeButtonVisibility();
-  });
+  btnDown.bind('touchstart mousedown', function(e){
+    onDownClick();
+  })
+  $(document).scroll(changeButtonVisibility);
 });
