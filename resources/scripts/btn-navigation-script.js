@@ -76,11 +76,6 @@ $(document).ready(function() {
     $("html, body").animate({
       scrollTop: top
     }, 1000);
-
-    // Show or hide the "up" and "down" buttons
-    if (prevSection.is("#jumbotron")) {
-      $("#btn-up").hide();
-    }
     $("#btn-down").show();
   });
 
@@ -98,12 +93,6 @@ $(document).ready(function() {
     $("html, body").animate({
       scrollTop: top
     }, 1000);
-
-      if (nextSection.is("#contact")) {
-        $("#btn-down").hide();
-      } else {
-        $("#btn-down").show();
-      }
     $("#btn-up").show();
   });
 
@@ -116,13 +105,7 @@ $(document).ready(function() {
         currentSection = $(this);
       }
     });
-
-    // Update the active section
-    if (currentSection != null && !currentSection.hasClass("active")) {
-      $("section.active").removeClass("active");
-      currentSection.addClass("active");
-      
-    }
+    
 // Show or hide the "up" and "down" buttons
       if($(window).scrollTop() === 0) {
         $("#btn-up").hide();
