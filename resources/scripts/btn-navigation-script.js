@@ -1,5 +1,3 @@
-
-
 function getMostVisible($elements) {
     var element,
         viewportHeight = $(window).height(),
