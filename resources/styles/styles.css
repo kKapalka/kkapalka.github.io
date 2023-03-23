@@ -8,6 +8,38 @@
   align-items: center;
   text-align: center;
 }
+
+#jumbotron {
+  background-image: url(../images/planet-bg-styled.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0;
+}
+
+#skills {
+  background-color: black;
+  color: white;
+}
+
+#jumbotron h1 {
+  font-size: 60px;
+}
+
+#jumbotron p {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+@media (max-width: 767px) {
+  #jumbotron h1 {
+    font-size: 36px;
+  }
+
+  #jumbotron p {
+    font-size: 18px;
+  }
+}
+
 /* Style for the up/down arrow buttons */
 .scroll-btn {
   display: none;
@@ -19,6 +51,9 @@
 /* Style for the active up/down arrow button */
 .active-btn {
   background-color: #000;
+}
+.my-btn {
+  color: white;
 }
 
 .button-container {  
