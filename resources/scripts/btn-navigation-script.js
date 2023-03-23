@@ -1,10 +1,13 @@
 $(document).ready(function() {
   var btnUp = $("#btn-up");
   var btnDown = $("#btn-down");
-  var sections = $("section");
-  
-
-  function getMostVisible($elements) {
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    btnUp.hide();
+    btnDown.hide();
+  } else {
+    
+    var sections = $("section"); 
+    function getMostVisible($elements) {
     var element,
         viewportHeight = $(window).height(),
         max = 0;
@@ -94,4 +97,7 @@ function changeButtonVisibility() {
   $(document).bind('scroll swipe', function(e){
     changeButtonVisibility();
   });
+  }
+
+  
 });
