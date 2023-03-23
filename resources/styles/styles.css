@@ -69,6 +69,9 @@
   height: 100%;
 }
 
+.card-body {
+  padding: 0.5rem!important;
+}
 
 @media (min-width: 993px) {
 
