@@ -1,4 +1,10 @@
-function getMostVisible($elements) {
+$(document).ready(function() {
+  var btnUp = $("#btn-up");
+  var btnDown = $("#btn-down");
+  var sections = $("section");
+  
+
+  function getMostVisible($elements) {
     var element,
         viewportHeight = $(window).height(),
         max = 0;
@@ -20,7 +26,6 @@ function getVisibleHeightPx($element, viewportHeight) {
             bottom: rect.bottom > 0 && rect.bottom < viewportHeight
         },
         visiblePx = 0;
-
     if (visible.top && visible.bottom) {
         // Whole element is visible
         visiblePx = height;
@@ -40,24 +45,26 @@ function getVisibleHeightPx($element, viewportHeight) {
 }
 
 function changeButtonVisibility() {
-  if($(window).scrollTop() === 0) {
-    $("#btn-up").hide();
+  var scrollTop = $(window).scrollTop();
+  if(scrollTop === 0) {
+    btnUp.hide();
   } else {
-    $("#btn-up").show();
+    btnUp.show();
   }
-  if($(window).scrollTop() + $(window).height() == $(document).height()) {
-    $("#btn-down").hide();
+  if(scrollTop + $(window).height() == $(document).height()) {
+    btnDown.hide();
   } else {
-    $("#btn-down").show();
+    btnDown.show();
   }
 }
+var debouncedChangeButtonVisibility = _.debounce(changeButtonVisibility, 20);
 
-$(document).ready(function() {
-  changeButtonVisibility();
+
+debouncedChangeButtonVisibility();
   // Add click event listener to the "up" button
-  $("#btn-up").click(function() {
+  btnUp.click(function() {
     // Get the previous section
-    var mostVisible = getMostVisible($("section"))    
+    var mostVisible = getMostVisible(sections)    
     var scrollTop = $(window).scrollTop()
     var top = mostVisible.prev().offset().top;
     if ((scrollTop - top) > $(window).height()) {
@@ -70,8 +77,8 @@ $(document).ready(function() {
   });
 
   // Add click event listener to the "down" button
-  $("#btn-down").click(function() {
-    var mostVisible = getMostVisible($("section"))
+  btnDown.click(function() {
+    var mostVisible = getMostVisible(sections)
     var scrollTop = $(window).scrollTop()
     var top = mostVisible.next().offset().top;
     if ((top - scrollTop) > $(window).height()) {
@@ -85,6 +92,6 @@ $(document).ready(function() {
 
   // Add scroll event listener to the document
   $(document).scroll(function() {
-    changeButtonVisibility();
+    debouncedChangeButtonVisibility();
   });
 });
