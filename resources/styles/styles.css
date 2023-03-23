@@ -40,3 +40,48 @@
 .footer {
   height: 5vh;
 }
+/* Default styling for the projects section */
+#projects .card-body {
+  height: 100%;
+}
+
+
+@media (min-width: 993px) {
+
+#projects .card-img-top {
+  object-fit: contain;
+  display: block;
+}
+}
+
+@media (max-width: 576px) {
+  .card-body {
+    display: none;
+  }
+  
+  .card-img-top {
+    height: auto;
+    object-fit: contain;
+    max-height: 200px;
+  }
+  
+  #projects .card {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 992px) {
+
+  .card-img-top {
+    height: 150px;
+    object-fit: cover;
+  }
+
+  .card-text {
+    display: none;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+}
