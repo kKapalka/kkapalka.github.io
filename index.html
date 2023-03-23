@@ -1,127 +1,219 @@
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="bootstrap-5.3.0-alpha1-dist/css/bootstrap.css">
-</head>
-<body>
-    <header id="header">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="visually-hidden">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Other</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+  <head>
+    <title>Coder McCoderFace - Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="resources/styles/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="d-block w-100" src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="First slide">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="Second slide">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="Third slide">
-          </div>
+  </head>
+  <body>
+    <button id="btn-up" class="btn btn-outline-secondary btn-up">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+        <!-- Jumbotron section -->
+    <section id="jumbotron" class="full-screen bg-info text-light">
+        <div class="container">
+          <h1 class="display-4">Coder McCoderFace</h1>
+          <p class="lead">Five years of experience designing, developing and maintaining web and mobile applications.</p>
+          <hr class="my-4">
+          <p>Solid understanding of software development life cycle, and design patterns used in software development process.</p>
+          <p>Capable of translating business needs into product features, with strong focus on scalability, reliability and responsiveness.</p>
+          <p>Well-organized and driven, striving for maximum efficiency.</p>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
+        <a href="#projects" class="scroll-btn">
+          <i class="fa fa-angle-down fa-3x"></i>
+        </a>
+      </section>
+      <!-- Projects section -->
+      <section id="projects" class="full-screen bg-light">
+        <div class="container">
+          <h2>Projects</h2>
+          <hr class="my-4">
+          <div class="row">
+            <!-- Project 1 -->
+            <div class="col-md-4">
+              <div class="card">
+                <img class="card-img-top" src="https://via.placeholder.com/350x150" alt="Project 1">
+                <div class="card-body">
+                  <h5 class="card-title">Project 1</h5>
+                  <p class="card-text">Description of Project 1.</p>
+                  <a href="#" class="btn btn-primary">Learn more</a>
+                </div>
+              </div>
+            </div>
+            <!-- Project 2 -->
+              <div class="col-md-4">
+                  <div class="card">
+                  <img class="card-img-top" src="https://via.placeholder.com/350x150" alt="Project 2">
+                  <div class="card-body">
+                      <h5 class="card-title">Project 2</h5>
+                      <p class="card-text">A description of project 2.</p>
+                      <a href="#" class="btn btn-primary">Learn More</a>
+                  </div>
+                  </div>
+              </div>
+  
+              <!-- Project 3 -->
+              <div class="col-md-4">
+                  <div class="card">
+                  <img class="card-img-top" src="https://via.placeholder.com/350x150" alt="Project 3">
+                  <div class="card-body">
+                      <h5 class="card-title">Project 3</h5>
+                      <p class="card-text">A description of project 3.</p>
+                      <a href="#" class="btn btn-primary">Learn More</a>
+                  </div>
+                  </div>
+              </div>
+              <!-- Project 4 -->
+            <div class="col-md-4">
+              <div class="card">
+                <img class="card-img-top" src="https://via.placeholder.com/350x150" alt="Project 4">
+                <div class="card-body">
+                  <h5 class="card-title">Project 4</h5>
+                  <p class="card-text">Description of Project 4.</p>
+                  <a href="#" class="btn btn-primary">Learn more</a>
+                </div>
+              </div>
+            </div>
+            <!-- Project 5 -->
+              <div class="col-md-4">
+                  <div class="card">
+                  <img class="card-img-top" src="https://via.placeholder.com/350x150" alt="Project 5">
+                  <div class="card-body">
+                      <h5 class="card-title">Project 5</h5>
+                      <p class="card-text">A description of project 5.</p>
+                      <a href="#" class="btn btn-primary">Learn More</a>
+                  </div>
+                  </div>
+              </div>
+  
+              <!-- Project 6 -->
+              <div class="col-md-4">
+                  <div class="card">
+                  <img class="card-img-top" src="https://via.placeholder.com/350x150" alt="Project 6">
+                  <div class="card-body">
+                      <h5 class="card-title">Project 6</h5>
+                      <p class="card-text">A description of project 6.</p>
+                      <a href="#" class="btn btn-primary">Learn More</a>
+                  </div>
+                  </div>
+              </div>
+              </div>
+          </div>
+      </section>
+  
+  <!-- Skills section -->
+  <section id="skills" class="full-screen bg-light">
+    <div class="container px-3">
+      <h2 class="text-center mb-4">Skills</h2>
+      <div class="row">
+        <div class="col-sm-6 col-lg-4 mb-3">
+          <h4 class="mb-3">Front-end</h4>
+          <ul class="list-unstyled mb-0">
+            <li>HTML5</li>
+            <li>CSS/CSS3</li>
+            <li>JavaScript/ES6</li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-3">
+          <h4 class="mb-3">Back-end</h4>
+          <ul class="list-unstyled mb-0">
+            <li>Java 8/11/15</li>
+            <li>Kotlin</li>
+            <li>PostgreSQL</li>
+            <li>Gradle/Maven</li>
+            <li>REST/SOAP</li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-3">
+          <h4 class="mb-3">Frameworks</h4>
+          <ul class="list-unstyled mb-0">
+            <li>Angular/AngularJS</li>
+            <li>Bootstrap</li>
+            <li>MaterialUI</li>
+            <li>Spring Boot</li>
+            <li>JUnit5</li>
+            <li>Hibernate</li>
+            <li>Mockito</li>
+            <li>Wiremock</li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-3">
+          <h4 class="mb-3">Other</h4>
+          <ul class="list-unstyled mb-0">
+            <li>Git/GitHub/Gitlab</li>
+            <li>SCRUM</li>
+            <li>YouTrack/Jira</li>
+            <li>Android(Java/Kotlin)</li>
+            <li>Docker</li>
+            <li>Apache Kafka</li>
+          </ul>
+        </div>
       </div>
-
-
+    </div>
+  </section>
+  
+  <!-- Contact section -->
+  <section id="contact" class="full-screen bg-light">
+      <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h2 class="section-title">Contact</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <form id="contact-form" method="post" action="#">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea class="form-control" id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+              </form>
+            </div>
+            <div class="col-md-6">
+              <div class="contact-info">
+                <p>Feel free to contact me for any further information or project inquiries.</p>
+                <p><i class="fas fa-map-marker-alt"></i> Address: 123 Main Street, Anytown USA</p>
+                <p><i class="fas fa-phone"></i> Phone: +1 (123) 456-7890</p>
+                <p><i class="fas fa-envelope"></i> Email: <a href="mailto:coder.mccoderface@example.com">coder.mccoderface@example.com</a></p>
+                <div class="social-icons">
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="#"><i class="fab fa-github"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+  </section>
+        
+    <!-- Footer -->
+    <footer class="text-center bg-dark text-light footer">
+        <p>&copy; 2023 Evan McEvanFace. All rights reserved.</p>
+    </footer>
     
 
-
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-lg-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <footer id="footer">
-    </footer>
-    <script src="bootstrap-5.3.0-alpha1-dist/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <button id="btn-down" class="btn btn-outline-secondary btn-down">
+    <i class="fas fa-arrow-down"></i>
+  </button>
+  
+  <script src="resources/scripts/btn-navigation-script.js"></script>
 </body>
+
 </html>

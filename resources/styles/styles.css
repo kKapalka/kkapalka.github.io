@@ -1,0 +1,42 @@
+/* Style for the full-screen sections */
+      .full-screen {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      /* Style for the up/down arrow buttons */
+      .scroll-btn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1;
+      }
+      /* Style for the active up/down arrow button */
+      .active-btn {
+        background-color: #000;
+      }
+#contact {
+  height: 95vh
+}	
+
+.btn-up, .btn-down {
+  position: fixed;
+  z-index: 999;
+}
+
+.btn-up {
+  top: 20px;
+}
+
+.btn-down {
+  bottom: 20px;
+}
+
+.footer {
+  height: 5vh;
+}
