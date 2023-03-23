@@ -102,6 +102,7 @@ $(document).ready(function() {
       } else {
         $("#btn-down").show();
       }
+    $("#btn-up").show();
   });
 
   // Add scroll event listener to the document
