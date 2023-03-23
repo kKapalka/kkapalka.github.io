@@ -36,56 +36,44 @@ function getVisibleHeightPx($element, viewportHeight) {
             visiblePx = height - absTop;
         }
     }
-
     return visiblePx;
 }
 
-$(document).ready(function() {
-  // Hide the "up" button on page load
-  var largestSection = getMostVisible($("section"))
-  largestSection.addClass("active");
-
-  // Show or hide the "up" and "down" buttons
-  if (largestSection.is("#jumbotron")) {
+function changeButtonVisibility() {
+  if($(window).scrollTop() === 0) {
     $("#btn-up").hide();
   } else {
     $("#btn-up").show();
   }
-  if (largestSection.is("#contact")) {
+  if($(window).scrollTop() + $(window).height() == $(document).height()) {
     $("#btn-down").hide();
   } else {
     $("#btn-down").show();
   }
+}
+
+$(document).ready(function() {
+  changeButtonVisibility();
   // Add click event listener to the "up" button
   $("#btn-up").click(function() {
     // Get the previous section
-    var mostVisible = getMostVisible($("section"))
-    
+    var mostVisible = getMostVisible($("section"))    
     var scrollTop = $(window).scrollTop()
-
-    var prevSection = mostVisible.prev();
-    var top = prevSection.offset().top;
+    var top = mostVisible.prev().offset().top;
     if ((scrollTop - top) > $(window).height()) {
       top = mostVisible.offset().top
-    }
-
-    if (mostVisible.is("#jumbotron")) {
-      top = 0
     }
     // Scroll to the previous section
     $("html, body").animate({
       scrollTop: top
     }, 1000);
-    $("#btn-down").show();
   });
 
   // Add click event listener to the "down" button
   $("#btn-down").click(function() {
     var mostVisible = getMostVisible($("section"))
     var scrollTop = $(window).scrollTop()
-    var nextSection = mostVisible.next();
-
-    var top = nextSection.offset().top;
+    var top = mostVisible.next().offset().top;
     if ((top - scrollTop) > $(window).height()) {
       top = mostVisible.offset().top
     }
@@ -93,29 +81,10 @@ $(document).ready(function() {
     $("html, body").animate({
       scrollTop: top
     }, 1000);
-    $("#btn-up").show();
   });
 
   // Add scroll event listener to the document
   $(document).scroll(function() {
-    // Get the current section
-    var currentSection = null;
-    $("section").each(function() {
-      if ($(this).offset().top <= $(document).scrollTop()) {
-        currentSection = $(this);
-      }
-    });
-    
-// Show or hide the "up" and "down" buttons
-      if($(window).scrollTop() === 0) {
-        $("#btn-up").hide();
-      } else {
-        $("#btn-up").show();
-      }
-      if($(window).scrollTop() + $(window).height() == $(document).height()) {
-        $("#btn-down").hide();
-      } else {
-        $("#btn-down").show();
-      }
+    changeButtonVisibility();
   });
 });
