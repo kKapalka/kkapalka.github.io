@@ -4,16 +4,13 @@ function getMostVisible($elements) {
     var element,
         viewportHeight = $(window).height(),
         max = 0;
-
     $elements.each(function() {
         var visiblePx = getVisibleHeightPx($(this), viewportHeight);
-
         if (visiblePx > max) {
             max = visiblePx;
             element = this;
         }
     });
-
     return $elements.filter(element);
 }
 
@@ -64,9 +61,17 @@ $(document).ready(function() {
   // Add click event listener to the "up" button
   $("#btn-up").click(function() {
     // Get the previous section
-    var prevSection = $("section.active").prev();
-    var top = prevSection.offset().top
-    if ($("section.active").is("#jumbotron")) {
+    var mostVisible = getMostVisible($("section"))
+    
+    var scrollTop = $(window).scrollTop()
+
+    var prevSection = mostVisible.prev();
+    var top = prevSection.offset().top;
+    if ((scrollTop - top) > $(window).height()) {
+      top = mostVisible.offset().top
+    }
+
+    if (mostVisible.is("#jumbotron")) {
       top = 0
     }
     // Scroll to the previous section
@@ -74,9 +79,6 @@ $(document).ready(function() {
       scrollTop: top
     }, 1000);
 
-    // Update the active section
-    $("section.active").removeClass("active");
-    prevSection.addClass("active");
     // Show or hide the "up" and "down" buttons
     if (prevSection.is("#jumbotron")) {
       $("#btn-up").hide();
@@ -86,17 +88,19 @@ $(document).ready(function() {
 
   // Add click event listener to the "down" button
   $("#btn-down").click(function() {
-    // Get the next section
-    var nextSection = $("section.active").next();
+    var mostVisible = getMostVisible($("section"))
+    var scrollTop = $(window).scrollTop()
+    var nextSection = mostVisible.next();
 
+    var top = nextSection.offset().top;
+    if ((top - scrollTop) > $(window).height()) {
+      top = mostVisible.offset().top
+    }
     // Scroll to the next section
     $("html, body").animate({
-      scrollTop: nextSection.offset().top
+      scrollTop: top
     }, 1000);
 
-    // Update the active section
-    $("section.active").removeClass("active");
-    nextSection.addClass("active");
       if (nextSection.is("#contact")) {
         $("#btn-down").hide();
       } else {
