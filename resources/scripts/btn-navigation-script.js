@@ -90,6 +90,8 @@ function changeButtonVisibility() {
   });
   btnDown.bind('touchstart mousedown', function(e){
     onDownClick();
-  })
-  $(document).scroll(changeButtonVisibility);
+  });
+  $(document).bind('scroll swipe', function(e){
+    changeButtonVisibility();
+  });
 });
