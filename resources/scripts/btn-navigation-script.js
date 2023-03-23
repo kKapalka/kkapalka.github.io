@@ -38,7 +38,6 @@ function getVisibleHeightPx($element, viewportHeight) {
         visiblePx = rect.bottom;
     } else if (height > viewportHeight && rect.top < 0) {
         var absTop = Math.abs(rect.top);
-
         if (absTop < height) {
             // Part of the element is visible
             visiblePx = height - absTop;
@@ -88,15 +87,9 @@ function changeButtonVisibility() {
 }
 
   changeButtonVisibility();
-  btnUp.bind('touchstart mousedown', function(e){
-    onUpClick()
-  });
-  btnDown.bind('touchstart mousedown', function(e){
-    onDownClick();
-  });
-  $(document).bind('scroll swipe', function(e){
-    changeButtonVisibility();
-  });
+  btnUp.click(onUpClick);
+  btnDown.click(onDownClick);
+  $(document).scroll(changeButtonVisibility);
   }
 
   
