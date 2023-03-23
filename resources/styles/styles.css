@@ -40,18 +40,9 @@
   }
 }
 
-/* Style for the up/down arrow buttons */
-.scroll-btn {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1;
-}
-/* Style for the active up/down arrow button */
-.active-btn {
-  background-color: #000;
-}
+#contact {
+  height: 95vh
+}	
 .my-btn {
   color: white;
 }
@@ -63,9 +54,6 @@
   z-index: 999;
 }
 
-#contact {
-  height: 95vh
-}	
 
 .my-btn {
   position: fixed;

@@ -57,8 +57,6 @@ function changeButtonVisibility() {
     btnDown.show();
   }
 }
-var debouncedChangeButtonVisibility = _.debounce(changeButtonVisibility, 20);
-
 
 debouncedChangeButtonVisibility();
   // Add click event listener to the "up" button
@@ -92,6 +90,6 @@ debouncedChangeButtonVisibility();
 
   // Add scroll event listener to the document
   $(document).scroll(function() {
-    debouncedChangeButtonVisibility();
+    changeButtonVisibility();
   });
 });
