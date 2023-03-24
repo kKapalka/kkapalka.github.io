@@ -15,8 +15,32 @@
   padding: 80px 0;
 }
 #skills {
-  background-color: black;
+  background-image: url(../images/eclipse-bg.jpg);
+  background-size: cover;
+  background-position: center;
   color: white;
+}
+#projects {
+  background-image: url(../images/fractal-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+#contact {
+  background-image: url(../images/system-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+#projects .container {
+  min-height: 75vh;
+  padding-top: 20px;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+#contact .container {
+  min-height: 75vh;
+  padding-top: 20px;
+  background-color: rgba(0, 0, 0, 0.75);
 }
 #jumbotron h1 {
   font-size: 60px;
@@ -100,7 +124,9 @@
   object-fit: contain;
 }
 .card {
-  background-color: black!important;
+  background-color: rgba(0, 0, 0, 0)!important;
+  border: 1px solid white !important;
+  margin: 10px;
 }
 .modal-content {
   background-color: black!important;
@@ -117,6 +143,7 @@
   margin: 0 5px;
   width: 100px;
   height: 100px;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 .skill-box.mb-4.text-center p {
   margin-bottom: 0.6rem;
@@ -125,7 +152,7 @@
   font-size: 3em;
 }
 
-@media (min-width: 993px) {
+@media (min-width: 992px) {
   #projects .card-img-top {
     object-fit: contain;
     display: block;
@@ -163,7 +190,7 @@
 
 @media (max-width: 991px) {
   .card-img-top {
-    height: 150px;
+    height: 120px;
     object-fit: cover;
   }
   .card-text {
