@@ -4,8 +4,7 @@ $(document).ready(function() {
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     btnUp.hide();
     btnDown.hide();
-  } else {
-    
+  } else {    
     var sections = $("section"); 
     function getMostVisible($elements) {
     var element,
@@ -90,7 +89,12 @@ function changeButtonVisibility() {
   btnUp.click(onUpClick);
   btnDown.click(onDownClick);
   $(document).scroll(changeButtonVisibility);
-  $(window).resize(changeButtonVisibility);
+  $(window).resize(function () {
+      setTimeout(function() {
+console.log("fire");
+    setDisplayBoardSize();
+}, 100);
+    });
   }
 
   
