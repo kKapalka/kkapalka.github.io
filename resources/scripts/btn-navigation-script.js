@@ -89,12 +89,7 @@ function changeButtonVisibility() {
   btnUp.click(onUpClick);
   btnDown.click(onDownClick);
   $(document).scroll(changeButtonVisibility);
-  $(window).resize(function () {
-      setTimeout(function() {
-console.log("fire");
-    setDisplayBoardSize();
-}, 100);
-    });
+  $(window).resize(changeButtonVisibility);
   }
 
   
