@@ -30,16 +30,6 @@
   line-height: 1.5;
 }
 
-@media (max-width: 767px) {
-  #jumbotron h1 {
-    font-size: 36px;
-  }
-
-  #jumbotron p {
-    font-size: 18px;
-  }
-}
-
 #contact {
   height: 95vh
 }	
@@ -98,41 +88,9 @@
 
 @media (min-width: 993px) {
 
-#projects .card-img-top {
-  object-fit: contain;
-  display: block;
-}
-}
-
-@media (max-width: 576px) {
-  .card-body {
-    display: none;
-  }
-  
-  .card-img-top {
-    height: auto;
+  #projects .card-img-top {
     object-fit: contain;
-    max-height: 200px;
-  }
-  
-  #projects .card {
-    margin-bottom: 15px;
-  }
-}
-
-@media (max-width: 992px) {
-
-  .card-img-top {
-    height: 150px;
-    object-fit: cover;
-  }
-
-  .card-text {
-    display: none;
-  }
-
-  .card-title {
-    font-size: 1.2rem;
+    display: block;
   }
 }
 
@@ -218,6 +176,20 @@
 }
 
 @media (max-width: 991px) {
+
+  .card-img-top {
+    height: 150px;
+    object-fit: cover;
+  }
+
+  .card-text {
+    display: none;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
   .col-6.col-md-2.mb-4.text-center {
     max-width: 85px;
     max-height: 85px;
@@ -230,17 +202,26 @@
     max-height: 300px;
   }
   
-.video-container {
-  max-width: 440px;
-  max-height: 300px;
-}
-.carousel-inner {
-  max-height: 300px;
-}
+  .video-container {
+    max-width: 440px;
+    max-height: 300px;
+  }
+  .carousel-inner {
+    max-height: 300px;
+  }
 }
 
 
 @media (max-width: 768px) {
+  
+  #jumbotron h1 {
+    font-size: 36px;
+  }
+
+  #jumbotron p {
+    font-size: 18px;
+  }
+
   .col-6.col-md-2.mb-4.text-center {
     max-width: 65px;
     max-height: 65px;
@@ -252,5 +233,34 @@
   }
   .col-6.col-md-2.mb-4.text-center p {
     display: none;
+  }
+}
+
+@media (max-width: 572px) {
+  
+  .card-body {
+    display: none;
+  }
+  
+  .card-img-top {
+    height: auto;
+    object-fit: contain;
+    max-height: 200px;
+  }
+  
+  #projects .card {
+    margin-bottom: 15px;
+  }
+  .carouselExampleIndicators {
+    max-width: 300px;
+    max-height: 200px;
+  }
+  
+  .video-container {
+    max-width: 300px;
+    max-height: 200px;
+  }
+  .carousel-inner {
+    max-height: 200px;
   }
 }
