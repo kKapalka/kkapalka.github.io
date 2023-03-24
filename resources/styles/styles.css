@@ -263,8 +263,11 @@
 
 @media (max-width: 572px) {  
   .card-body {
-    display: none;
-  }  
+    height: 35px;
+  }
+  .card-body h5 {
+    font-size: 0.8rem;
+  }
   .card-img-top {
     height: auto;
     object-fit: contain;
