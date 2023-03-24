@@ -20,6 +20,17 @@
   background-position: center;
   color: white;
 }
+.contact-button {
+  width: 250px;
+  text-align: center;
+}
+.contact-button >*{
+  margin: 0 25px;
+}
+.contact-p {
+  width: 70%;
+  margin-left: 15%;
+}
 #projects {
   background-image: url(../images/fractal-bg.jpg);
   background-size: cover;
