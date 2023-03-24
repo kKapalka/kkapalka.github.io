@@ -90,6 +90,7 @@ function changeButtonVisibility() {
   btnUp.click(onUpClick);
   btnDown.click(onDownClick);
   $(document).scroll(changeButtonVisibility);
+  $(window).resize(changeButtonVisibility);
   }
 
   
