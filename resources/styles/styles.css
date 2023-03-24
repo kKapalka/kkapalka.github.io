@@ -170,15 +170,15 @@
   }
 }
 
-@media (max-height: 650px) {
+@media (max-height: 700px) {
   .full-screen {
-    height: 650px;
+    height: 700px;
   }
   .button-container {
     display: none;
   }
   #contact {
-    height: 620px;
+    height: 670px;
   }
   .footer {
     height: 30px;
