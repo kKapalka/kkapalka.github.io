@@ -151,19 +151,18 @@
   }
 }
 
-#carouselExampleIndicators {
+.carouselExampleIndicators {
   width: 740px;
   height: 600px;
   margin: auto;
 }
-.carousel-item {
+.carousel-inner {
   height: 600px;
-  width: 740px;
 }
 .carousel-item img {
   object-fit: cover;
-  height: 600px;
-  width: 800px;
+  height: 100%;
+  width: 100%;
 }
 .video-container {
   height: 600px;
@@ -226,6 +225,18 @@
   .col-6.col-md-2.mb-4.text-center i {
     font-size: 2.2em;
   }
+  .carouselExampleIndicators {
+    max-width: 440px;
+    max-height: 300px;
+  }
+  
+.video-container {
+  max-width: 440px;
+  max-height: 300px;
+}
+.carousel-inner {
+  max-height: 300px;
+}
 }
 
 
