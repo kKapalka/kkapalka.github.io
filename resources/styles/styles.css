@@ -81,17 +81,18 @@
   width: 100%;
 }
 .video-container {
-  height: 600px;
+  height: 550px;
   width: 740px;
   background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 .video-container video {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 .card {
   background-color: black!important;
@@ -179,6 +180,9 @@
   }
   .carousel-inner {
     max-height: 300px;
+  }
+  .carousel-indicators {
+    display: none!important;
   }
 }
 
