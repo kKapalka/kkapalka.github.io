@@ -83,8 +83,8 @@
   background-color: rgba(255, 255, 255, 0.2)!important;
 }
 
-.modal-box:selected {
-  background-color: rgba(255, 255, 255, 0.2)!important;
+.modal-box:active {
+  background-color: rgba(255, 255, 255, 0.35)!important;
 }
 .button-container {  
   position: fixed;
