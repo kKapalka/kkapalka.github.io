@@ -124,6 +124,13 @@
 }
 .footer {
   height: 5vh;
+  position: relative;
+}
+.footer p {
+  margin-bottom: 0.5rem;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 /* Default styling for the projects section */
 .card-body {
