@@ -5,9 +5,22 @@ $(document).ready(function() {
     btnUp.hide();
     btnDown.hide();
     if ($(window).width() < 768) {
-      $('.skill-box').tooltip();
+      $('.skill-box').on('click', function() {
+        $('.skill-box.active').removeClass('active');
+        $(this).addClass('active');
+        $(this).tooltip('toggle');
+      });
+      $(document).on('click', function(event) {
+        if (!$(event.target).closest('.skill-box.active').length) {
+          $('.skill-box.active').removeClass('active');
+          $('.skill-box').tooltip('hide');
+        }
+      });
     }
-  } else {    
+  } else {  
+    $('.skill-box').tooltip({
+      trigger: 'hover'
+    });  
     var sections = $("section"); 
     function getMostVisible($elements) {
     var element,
