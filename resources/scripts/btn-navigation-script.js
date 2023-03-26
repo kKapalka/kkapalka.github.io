@@ -4,6 +4,9 @@ $(document).ready(function() {
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     btnUp.hide();
     btnDown.hide();
+    if ($(window).width() < 768) {
+      $('.skill-box').tooltip();
+    }
   } else {    
     var sections = $("section"); 
     function getMostVisible($elements) {
