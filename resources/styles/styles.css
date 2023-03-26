@@ -20,6 +20,13 @@
   background-position: center;
   color: white;
 }
+.svg-icon {
+  width: 35px;
+  height: 35px;
+  
+  margin-top: 0.2rem!important;
+  margin-bottom: 0.2rem!important;
+}
 .contact-button {
   width: 250px;
   text-align: center;
@@ -268,6 +275,11 @@
   }
   .skill-box.mb-4.text-center p {
     display: none;
+  }
+  
+  .svg-icon {
+    width: 45px;
+    height: 45px;
   }
 }
 
