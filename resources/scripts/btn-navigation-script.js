@@ -90,7 +90,8 @@ function changeButtonVisibility() {
   btnDown.click(onDownClick);
   $(document).scroll(changeButtonVisibility);
   $(window).resize(changeButtonVisibility);
+  
+  $('[data-toggle="tooltip"]').tooltip();
   }
-
   
 });

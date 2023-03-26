@@ -184,6 +184,16 @@
     height: 30px;
   }
 }
+.tooltip-inner {
+  border: 1px solid white;
+  background-color: rgb(32, 32, 32)!important;
+}
+
+@media (min-width: 768px) {
+  .tooltip{
+    display: none!important;
+  }
+}
 
 @media (max-width: 1199px) {
   .skill-box.mb-4.text-center {
