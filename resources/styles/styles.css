@@ -74,6 +74,18 @@
 #contact {
   height: 95vh
 }
+.modal-box {
+  cursor: pointer;
+  transition: background-color 0.25s ease-in-out;
+}
+
+.modal-box:hover {
+  background-color: rgba(255, 255, 255, 0.2)!important;
+}
+
+.modal-box:selected {
+  background-color: rgba(255, 255, 255, 0.2)!important;
+}
 .button-container {  
   position: fixed;
   height: 100vh;
