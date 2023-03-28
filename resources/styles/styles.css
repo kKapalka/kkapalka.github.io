@@ -132,6 +132,12 @@
   position: absolute;
   bottom: 0;
 }
+.carousel-item {
+  position: relative;
+}
+.carousel-item img {
+  margin-top:6%;
+}
 /* Default styling for the projects section */
 .card-body {
   height: 100px;
@@ -197,6 +203,12 @@
   #projects .card-img-top {
     object-fit: contain;
     display: block;
+    height: 150px;
+    background-color: black;
+  }
+  
+  .carousel-item img {
+    margin-top:9%;
   }
 }
 
@@ -250,7 +262,8 @@
 @media (max-width: 991px) {
   .card-img-top {
     height: 120px;
-    object-fit: cover;
+    object-fit: contain;
+    background-color: black;
   }
   .card-body {
     height: 50px;
