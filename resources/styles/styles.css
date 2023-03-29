@@ -199,6 +199,10 @@
   font-size: 3em;
 }
 
+.bg-black {
+  background-color: black!important;
+}
+
 @media (min-width: 992px) {
   #projects .card-img-top {
     object-fit: contain;
